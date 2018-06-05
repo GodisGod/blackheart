@@ -14,13 +14,6 @@ public class myClass {
             String[]files=file.list();
             for(String path:files){
                 String afterPointLetter=path.substring(path.lastIndexOf(".")+1,path.length());
-                if(forbidFormat(afterPointLetter)){
-                    System.out.println("d:\\movie\\"+path);
-                    File deleteFile=new File("d:\\movie\\"+path);
-                    if(deleteFile.exists()){
-                        deleteFile.delete();
-                    }
-                }
             }
         }else{
             if(file.isFile()){
